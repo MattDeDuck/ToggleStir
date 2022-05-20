@@ -17,3 +17,7 @@ Note: You need the `BepInEx_64` version for use with Potion Craft
 The settings are found in `settings.json`
 - You can customise the speed of the stirring (float value) This is ranging from slowest `0.1` - fastest `1.0`
 - You can also customise the key you use for the toggle. You can see the naming conventions for the inputs [here](https://docs.unity3d.com/Manual/class-InputManager.html)
+
+### Example
+
+![Stir with no spoon in the cauldron!](https://github.com/MattDeDuck/DeathGivesBack/blob/master/togglestirexample.gif)
