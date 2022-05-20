@@ -20,4 +20,4 @@ The settings are found in `settings.json`
 
 ### Example
 
-![Stir with no spoon in the cauldron!](https://github.com/MattDeDuck/DeathGivesBack/blob/master/togglestirexample.gif)
+![Stir with no spoon in the cauldron!](https://github.com/MattDeDuck/ToggleStir/blob/master/togglestirexample.gif)
