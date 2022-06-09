@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace ToggleStir
 {
-    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, "1.0.1.0")]
     public class Plugin : BaseUnityPlugin
     {
         public static ManualLogSource Log { get; set; }
@@ -19,7 +19,7 @@ namespace ToggleStir
         public static string toggleButton;
         public JObject settingsObj;
 
-        public bool isActive = false;
+        public static bool isActive = false;
 
         private void Awake()
         {
@@ -66,6 +66,13 @@ namespace ToggleStir
                     }
                 }
             }
+        }
+
+        [HarmonyPrefix, HarmonyPatch(typeof(IndicatorMapItem), "OnIndicatorRuined")]
+        public static void OnIndicatorRuined_Prefix()
+        {
+            // If potion fails...turn the toggle off
+            isActive = false;
         }
     }
 }
